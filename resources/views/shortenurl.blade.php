@@ -26,7 +26,7 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>a quick and dirty hacked together urlshortener</h1>
+        <h1>qurls -- a quick and dirty hacked together urlshortener</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">
