@@ -37,7 +37,7 @@
                 </ul>
             </div>
         @endif
-         <form action="/shorten" method="post" >
+         <form action="{{ route('shorten') }}" method="post" >
             @csrf
 
             <div class="input-group mb-3">
