@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('shortenurl');
 });
 
-Route::post('/shorten', "URLShortenerController@shorten")->name('shorten');
+Route::match(['get', 'post'], '/shorten', "URLShortenerController@shorten")->name('shorten');
 Route::get('/s/{shortcut}', function ($shortcut) {
     $url = App\UrlMapping::where('shortcut', $shortcut)->first()->url;
     return Redirect::to($url);;
