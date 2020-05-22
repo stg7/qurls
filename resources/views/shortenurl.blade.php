@@ -59,7 +59,7 @@
               <tbody>
                 <tr>
                   <td>{{ $url_mapping->url }}</td>
-                  <td><a href="/s/{{$url_mapping->shortcut}}" target="_blank" >{{Request::root()}}/s/{{$url_mapping->shortcut}}</a></td>
+                  <td><a href="{{ URL::to("/s/".$url_mapping->shortcut) }}" target="_blank" >{{Request::root()}}/s/{{$url_mapping->shortcut}}</a></td>
                 </tr>
               </tbody>
             </table>
