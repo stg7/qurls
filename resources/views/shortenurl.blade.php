@@ -26,8 +26,6 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>qurls -- a quick and dirty hacked together urlshortener</h1>
-
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -37,6 +35,8 @@
                 </ul>
             </div>
         @endif
+        <h1>qurls -- a quick and dirty hacked together urlshortener</h1>
+
          <form action="{{ route('shorten') }}" method="post" >
             @csrf
 
