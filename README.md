@@ -8,6 +8,15 @@ this project is just of educational nature, and was my personal try to get some 
 * composer
 * Laravel 7.x  (all requirements for laravel)
 
+### Ubuntu 20.04
+```bash
+sudo apt install php7.4 php7.4-xml php7.4-gd php7.4-opcache php7.4-mbstring php7.4-zip php7.4-sqlite3 npm
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+# add composer to your $PATH
+```
+
 ## database config
 
 Rename `.env.example` to `.env`,
