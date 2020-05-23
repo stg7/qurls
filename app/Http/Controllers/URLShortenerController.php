@@ -18,32 +18,6 @@ class URLShortenerController extends Controller
             'url-to-shorten' => 'required|url',
         ])->validate("post");
 
-        // $validatedData = $request->validate([
-        //     'url-to-shorten' => 'required|max:2',
-        // ]);
-        //
-
-        // $validator = Validator::make($request->all(), [
-        //     'url-to-shorten' => 'required'
-        // ])
-
-        // $validator->after(function ($validator) {
-        //     if (filter_var($request->input('url-to-shorten'), FILTER_VALIDATE_URL)) {
-        //         $validator->errors()->add('url-to-shorten', 'not a valid url');
-        //     }
-
-        // });
-
-        // if ($validator->fails()) {
-        //     //
-
-        //     return redirect('/')
-        //                 ->withErrors($validator)
-        //                 ->withInput();
-        // }
-
-
-
         $url_mapping = new UrlMapping;
 
         $url_mapping->url = $request->input('url-to-shorten');
