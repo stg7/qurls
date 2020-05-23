@@ -24,7 +24,4 @@ Route::get('/s/{shortcut}', function ($shortcut) {
 })->name('shortcut');
 
 
-
 Auth::routes(['register' => false]);
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -15,6 +15,12 @@
         </style>
         <script src="{{ asset('js/app.js') }}" defer></script>
 
+        <script type="text/javascript">
+          function showabout() {
+
+          }
+
+        </script>
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -64,13 +70,29 @@
               </tbody>
             </table>
         @endisset
+      <div style="height:3em">
+      </div>
+      <div class="card">
+        <div class="card-header">
+          About qurls
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            qurls is a qick proof of concept url shortener, to checkout <a href="https://laravel.com/">laravel</a> as a php web framework.
+            This software is not meant for production and was only developed for educational reasons.
+
+            For other projects checkout my github page: <a href="https://github.com/stg7">stg7</a>.
+
+          </p>
+        </div>
+      </div>
 
       </div>
 
     </main>
 
     <footer class="footer-copyright text-center py-3">
-        &copy; 2020 <a href="https://github.com/stg7">stg7</a> <p>a proof of concept project to work with <a href="https://laravel.com/">laravel</a></p>
+        &copy; 2020 <a href="https://github.com/stg7">stg7</a>
     </footer>
     </body>
 </html>
