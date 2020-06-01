@@ -41,16 +41,27 @@ php artisan serve
 ## deployment
 see laravel documentation
 
-nginx config for sub dirs:
+nginx config for sub dirs, tested with nginx/1.18.0:
 ```
 ....
 # assuming a working php config
 
 ...  # at the end of server {}
 
-    location /path/to/qurls {
-        try_files $uri $uri/ /path/to/qurls/index.php?$args;
+    location /qurls {     
+        alias /path/to/qurls/public;
+        try_files $uri $uri/ @qurls;
+        index  index.html index.htm index.php;
+	    location ~ \.php$ {
+	        include        fastcgi_params;
+	        fastcgi_param SCRIPT_FILENAME $request_filename;
+	        fastcgi_pass   unix:/run/php-fpm/php-fpm.sock;
+   	    }
+    }
+    location @qurls {
+        rewrite /qurls/(.*)$ /qurls/index.php?$1 last;
     }
 
 
 ```
+This config is roughly based on https://serversforhackers.com/c/nginx-php-in-subdirectory
